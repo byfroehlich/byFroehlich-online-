@@ -11,7 +11,7 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 const description = "Mathias Fröhlich. Ich schaue hin, hinterfrage und gestalte.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://byfroehlich.de"),
+  metadataBase: new URL("https://www.byfroehlich.de"),
   title: "byFröhlich",
   description,
   openGraph: {
