@@ -119,7 +119,7 @@ export default function Home() {
                 Mathias Fröhlich. <span>Freigeist.</span>
               </h2>
               <p style={{ marginTop: 22, fontSize: "clamp(18px,1.8vw,21px)", maxWidth: "36ch", color: "var(--bone)" }}>
-                Ich nutze mein Hirn gern. Ich schaue hin, hinterfrage und gestalte.
+                Ich schaue hin, hinterfrage und gestalte.
               </p>
               <div className="tags">
                 <span>Denker</span>
