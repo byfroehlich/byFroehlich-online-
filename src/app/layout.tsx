@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description,
   },
   twitter: { card: "summary_large_image", title: "byFröhlich", description },
+  // Domain-Verifizierung für das Meta Business-Portfolio (Unternehmensverifizierung, WhatsApp Cloud API).
+  other: { "facebook-domain-verification": "p4k6x8wa74td1lv4pgs5ldrlxnmn2v" },
 };
 
 export const viewport: Viewport = {
