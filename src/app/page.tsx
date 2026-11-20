@@ -199,11 +199,10 @@ export default function Home() {
             <p>
               <b>Hosting</b>
               <br />
-              Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA gehostet. Beim Aufruf der Seite verarbeitet Vercel
-              technisch notwendige Daten wie IP-Adresse, Zeitpunkt des Abrufs, aufgerufene Seite und Browser-Informationen, um die Seite auszuliefern und
-              vor Missbrauch zu schützen. Rechtsgrundlage ist mein berechtigtes Interesse an einem sicheren und stabilen Betrieb (Art. 6 Abs. 1 lit. f
-              DSGVO). Vercel ist unter dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung in die USA stützt sich auf den
-              Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung.
+              Diese Website liegt auf einem Server der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland. Beim Aufruf der Seite
+              werden technisch notwendige Daten wie IP-Adresse, Zeitpunkt des Abrufs, aufgerufene Seite und Browser-Informationen verarbeitet, um die
+              Seite auszuliefern und vor Missbrauch zu schützen. Rechtsgrundlage ist mein berechtigtes Interesse an einem sicheren und stabilen Betrieb
+              (Art. 6 Abs. 1 lit. f DSGVO). Die Daten verlassen die EU nicht.
             </p>
             <p>
               <b>Kontakt per E-Mail oder Telefon</b>
