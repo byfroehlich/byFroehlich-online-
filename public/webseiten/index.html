@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webseiten, die Sie selbst pflegen – byFröhlich</title>
+<link rel="canonical" href="https://www.byfroehlich.de/webseiten/">
+<meta name="description" content="Neue Website oder Ihre bestehende 1:1 übernommen – schnell, sicher, bei Google und KI gut zu finden. Änderungen machen Sie selbst per Chat. Aus Vils, Tirol, für Außerfern und Allgäu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2311686b'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23e8eee9' font-family='Arial' font-weight='700'%3EbF%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"byFröhlich – Webseiten","url":"https://www.byfroehlich.de/webseiten/","email":"kontakt@byfroehlich.de","telephone":"+49 179 9042777","areaServed":["Außerfern","Reutte","Allgäu","Tirol"],"address":{"@type":"PostalAddress","streetAddress":"Lußwiesen 2b","postalCode":"87547","addressLocality":"Missen-Wilhams","addressCountry":"DE"},"description":"Webseiten für Betriebe und Vereine: neu gestaltet oder 1:1 übernommen, statisch, schnell, per KI-Chat selbst pflegbar."}
+</script>
+<style>
+@font-face{font-family:"Bricolage";src:url(/webseiten/fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Instrument";src:url(/webseiten/fonts/instrument.woff2) format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"JBMono";src:url(/webseiten/fonts/jetbrains.woff2) format("woff2");font-weight:100 800;font-display:swap}
+:root{
+  --deep:#061a1d;--bg:#08221f;--surface:#0c2e30;--petrol:#11686b;--aqua:#86d3c6;--bone:#e8eee9;--muted:#8fa9a5;--copper:#d8945f;
+  --hair:rgba(134,211,198,.16);
+  --fd:"Bricolage","Arial",system-ui,sans-serif;--fb:"Instrument",system-ui,-apple-system,"Segoe UI",sans-serif;--fm:"JBMono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--deep);color:var(--bone);font-family:var(--fb);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--fm);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--aqua)}
+h1,h2,h3{font-family:var(--fd);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(34px,5vw,58px);margin:10px 0 18px}
+h3{font-size:22px;letter-spacing:-.01em;line-height:1.2}
+p.lead{font-size:20px;color:var(--muted);max-width:640px}
+section{padding:110px 0;position:relative}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;transition:transform .2s,background .2s,color .2s;cursor:pointer;border:0;font-family:var(--fb)}
+.btn-primary{background:var(--aqua);color:var(--deep)}
+.btn-primary:hover{transform:translateY(-2px);background:#a7e4d9}
+.btn-ghost{border:1px solid var(--hair);color:var(--bone);background:transparent}
+.btn-ghost:hover{border-color:var(--aqua)}
+
+/* Kopf */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s}
+header.scrolled{background:rgba(6,26,29,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--fd);font-weight:700;font-size:21px;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--aqua)}
+.logo small{font-family:var(--fm);font-size:11px;color:var(--muted);margin-left:10px;letter-spacing:.1em;text-transform:uppercase}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--bone)}
+@media(max-width:860px){.nav ul{display:none}}
+@media(max-width:560px){.logo small{display:none}.nav .btn{padding:9px 14px!important;font-size:13px!important}.mini .body{grid-template-columns:1fr}section{padding:80px 0}}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(46px,8vw,104px);max-width:960px;margin:18px 0 26px}
+.hero h1 em{font-style:normal;color:var(--aqua);position:relative}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:64px;color:var(--muted);font-size:15px}
+.hero .facts b{display:block;color:var(--bone);font-family:var(--fd);font-size:22px}
+
+/* Schmerz */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.pain{background:var(--surface);border:1px solid var(--hair);border-radius:22px;padding:30px;transition:transform .3s,border-color .3s}
+.pain:hover{transform:translateY(-4px);border-color:rgba(134,211,198,.4)}
+.pain .q{font-family:var(--fd);font-size:24px;line-height:1.2;margin-bottom:12px}
+.pain p{color:var(--muted);font-size:16px}
+@media(max-width:860px){.pains{grid-template-columns:1fr}}
+
+/* Chat-Demo */
+.demo{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;margin-top:46px;align-items:stretch}
+@media(max-width:900px){.demo{grid-template-columns:1fr}}
+.browser{background:#f6f2ea;color:#2b2420;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.bar{background:#e9e3d8;padding:10px 14px;display:flex;align-items:center;gap:7px}
+.bar i{width:11px;height:11px;border-radius:50%;background:#d3c8b8;display:block}
+.bar .url{margin-left:10px;font-family:var(--fm);font-size:12px;color:#7a6d60;background:#f6f2ea;border-radius:8px;padding:4px 10px;flex:1}
+.mini{padding:0}
+.mini .mh{height:190px;background:linear-gradient(135deg,#5a6b4a,#8a7a4f 55%,#c9a46a);position:relative;transition:background .8s}
+.mini .mh .t{position:absolute;left:26px;bottom:20px;color:#fff;font-family:Georgia,serif;font-size:30px;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.mini .mh .t small{display:block;font-size:13px;font-family:var(--fb);letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.mini .badge{position:absolute;right:18px;top:16px;background:#c0392b;color:#fff;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;opacity:0;transform:translateY(-8px);transition:all .5s}
+.mini .badge.show{opacity:1;transform:none}
+.mini .body{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px 26px 28px}
+.mini h4{font-family:Georgia,serif;font-size:17px;margin-bottom:6px;color:#5a4a3c}
+.mini .box{font-size:14.5px;line-height:1.55;padding:10px 12px;border-radius:10px;transition:background .6s}
+.mini .box.flash{background:#ffe9a8}
+.mini .row{display:flex;justify-content:space-between;gap:10px}
+.chat{background:var(--surface);border:1px solid var(--hair);border-radius:18px;display:flex;flex-direction:column;overflow:hidden}
+.chat .head{padding:14px 18px;border-bottom:1px solid var(--hair);display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.chat .head .dot{width:9px;height:9px;border-radius:50%;background:#4fd18b;box-shadow:0 0 10px #4fd18b}
+.msgs{flex:1;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:260px;max-height:330px;overflow:auto}
+.m{max-width:86%;padding:10px 14px;border-radius:16px;font-size:15px;line-height:1.45;animation:pop .35s ease}
+.m.u{align-self:flex-end;background:var(--petrol);border-bottom-right-radius:5px}
+.m.a{align-self:flex-start;background:#0f3a3c;border:1px solid var(--hair);border-bottom-left-radius:5px;color:#d5e6e1}
+.m.typing{color:var(--muted);font-style:italic}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px;border-top:1px solid var(--hair)}
+.chip{background:transparent;border:1px solid var(--hair);color:var(--bone);border-radius:999px;padding:8px 13px;font-size:13.5px;cursor:pointer;font-family:var(--fb);transition:all .2s}
+.chip:hover{border-color:var(--aqua);color:var(--aqua)}
+.chip:disabled{opacity:.35;cursor:default}
+.demo-note{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* Zwei Wege */
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+@media(max-width:860px){.ways{grid-template-columns:1fr}}
+.way{display:flex;flex-direction:column;border-radius:26px;padding:38px;border:1px solid var(--hair);background:linear-gradient(160deg,var(--surface),var(--bg));position:relative;overflow:hidden}
+.way .tag{display:inline-block;margin-bottom:16px}
+.way h3{font-size:30px;margin-bottom:12px}
+.way p{color:var(--muted);font-size:16.5px}
+.way ul{list-style:none;margin-top:18px;display:grid;gap:8px;font-size:15.5px}
+.way li::before{content:"→ ";color:var(--aqua)}
+.way .price{margin-top:auto;padding-top:24px;font-family:var(--fd);font-size:40px;font-weight:700}
+.way .price small{font-family:var(--fb);font-size:15px;color:var(--muted);font-weight:400}
+.toggle{margin-top:22px;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.sw{width:52px;height:28px;border-radius:999px;background:#123f41;position:relative;cursor:pointer;border:1px solid var(--hair)}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--aqua);transition:left .3s}
+.sw.on::after{left:27px}
+.cmp{margin-top:14px;height:120px;border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--hair)}
+.cmp>div{position:absolute;inset:0;padding:14px;font-size:13px;transition:opacity .5s}
+.cmp .alt{background:#e7e2d6;color:#333;font-family:"Times New Roman",serif}
+.cmp .alt .hd{background:#7b2a2a;color:#fff;padding:4px 8px;font-size:14px}
+.cmp .neu{background:#e7e2d6;color:#333;font-family:"Times New Roman",serif;opacity:0}
+.cmp .neu .hd{background:#7b2a2a;color:#fff;padding:4px 8px;font-size:14px}
+.cmp .neu .ok{position:absolute;right:12px;bottom:12px;font-family:var(--fm);font-size:11px;background:var(--petrol);color:#fff;padding:4px 8px;border-radius:6px}
+.cmp.on .neu{opacity:1}.cmp.on .alt{opacity:0}
+
+/* Vorteile */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:24px;overflow:hidden;margin-top:46px}
+.feat{background:var(--deep);padding:32px}
+.feat .ic{font-family:var(--fm);color:var(--copper);font-size:13px;margin-bottom:14px}
+.feat p{color:var(--muted);font-size:15.5px;margin-top:8px}
+@media(max-width:860px){.feats{grid-template-columns:1fr}}
+
+/* Preise */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:900px){.prices{grid-template-columns:1fr}}
+.plan{border:1px solid var(--hair);border-radius:24px;padding:32px;background:var(--surface);display:flex;flex-direction:column}
+.plan.hl{border-color:var(--aqua);background:linear-gradient(170deg,#0f4446,var(--surface));position:relative}
+.plan.hl::before{content:"Am beliebtesten";position:absolute;top:-12px;left:28px;background:var(--aqua);color:var(--deep);font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+.plan .n{font-family:var(--fd);font-size:26px;font-weight:700}
+.plan .s{color:var(--muted);font-size:15px;margin:4px 0 18px}
+.plan .p{font-family:var(--fd);font-size:52px;font-weight:700;line-height:1}
+.plan .p small{font-size:16px;font-family:var(--fb);color:var(--muted);font-weight:400}
+.plan ul{list-style:none;margin:22px 0 0;display:grid;gap:9px;font-size:15px}
+.plan li{padding-left:24px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--aqua);font-weight:700}
+.plan li.plus::before{content:"+";color:var(--copper)}
+.setup{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+@media(max-width:900px){.setup{grid-template-columns:1fr}}
+.su{border:1px dashed rgba(134,211,198,.3);border-radius:20px;padding:24px}
+.su .p{font-family:var(--fd);font-size:30px;font-weight:700;margin:6px 0}
+.su p{color:var(--muted);font-size:15px}
+.extra{margin-top:22px;border-radius:20px;background:var(--bg);border:1px solid var(--hair);padding:26px 28px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;font-size:15.5px}
+@media(max-width:900px){.extra{grid-template-columns:1fr}}
+.extra table{width:100%;border-collapse:collapse}
+.extra td{padding:7px 0;border-bottom:1px solid var(--hair)}
+.extra td:last-child{text-align:right;font-family:var(--fm);color:var(--aqua);white-space:nowrap}
+.fine{font-size:13.5px;color:var(--muted);margin-top:18px;max-width:900px}
+
+/* Ablauf */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px;counter-reset:s}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{padding:26px;border-top:2px solid var(--petrol);counter-increment:s}
+.step::before{content:"0" counter(s);font-family:var(--fm);color:var(--aqua);font-size:13px}
+.step h3{margin:12px 0 8px}
+.step p{color:var(--muted);font-size:15.5px}
+
+/* Für wen */
+.who{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.who span{border:1px solid var(--hair);border-radius:999px;padding:11px 20px;font-size:16px;transition:all .25s}
+.who span:hover{background:var(--petrol);border-color:var(--petrol)}
+
+/* FAQ */
+.faq{margin-top:40px;border-top:1px solid var(--hair)}
+details{border-bottom:1px solid var(--hair);padding:22px 4px}
+summary{cursor:pointer;font-family:var(--fd);font-size:21px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::after{content:"+";color:var(--aqua);font-size:26px;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;max-width:780px;font-size:16.5px}
+
+/* Check */
+.check{background:radial-gradient(1200px 500px at 20% 0%,#0f4446,transparent),var(--bg);border:1px solid var(--hair);border-radius:32px;padding:60px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:900px){.check{grid-template-columns:1fr;padding:34px}}
+.check form{display:grid;gap:12px}
+.check input,.check select{width:100%;padding:16px 18px;border-radius:14px;border:1px solid var(--hair);background:var(--deep);color:var(--bone);font-size:16px;font-family:var(--fb)}
+.check input:focus,.check select:focus{outline:2px solid var(--aqua);border-color:transparent}
+.contact-line{margin-top:22px;display:flex;gap:24px;flex-wrap:wrap;font-size:15.5px;color:var(--muted)}
+.contact-line a{color:var(--bone);text-decoration:none;border-bottom:1px solid var(--hair)}
+
+footer{border-top:1px solid var(--hair);padding:50px 0 60px;color:var(--muted);font-size:14px}
+footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:760px){footer .cols{grid-template-columns:1fr}}
+footer h4{font-family:var(--fd);color:var(--bone);font-size:16px;margin-bottom:8px}
+footer details{padding:10px 0;border:0}
+footer summary{font-size:15px;font-family:var(--fb);font-weight:600;color:var(--bone)}
+footer details p{font-size:14px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:560px){.mini .body{grid-template-columns:1fr;gap:10px}.hero .facts{gap:20px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="/webseiten/">by<span>Fröhlich</span><small>Webseiten</small></a>
+    <ul>
+      <li><a href="#chat">So pflegen Sie</a></li>
+      <li><a href="#wege">Neu oder 1:1</a></li>
+      <li><a href="#preise">Preise</a></li>
+      <li><a href="#fragen">Fragen</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#check" style="padding:11px 20px;font-size:15px">Kostenlos prüfen</a>
+  </div>
+</header>
+
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="mono">Webseiten für Betriebe &amp; Vereine · Außerfern &amp; Allgäu</div>
+    <h1>Ihre Website.<br>Endlich <em>selbst</em> gepflegt.</h1>
+    <p class="lead">Neu gestaltet oder Ihre bestehende Seite 1:1 übernommen – technisch auf dem neuesten Stand, schnell und sicher. Ändern tun Sie sie danach so leicht, wie Sie eine Nachricht schreiben: Sie sagen dem Chat, was anders sein soll, und es steht drauf.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#check">Meine Website kostenlos prüfen lassen</a>
+      <a class="btn btn-ghost" href="#chat">Wie das Pflegen funktioniert</a>
+    </div>
+    <div class="facts">
+      <div><b>ab 299 €</b>einmalig für die 1:1-Übernahme</div>
+      <div><b>ab 29 €</b>im Monat inkl. Hosting</div>
+      <div><b>24 / 7</b>selbst ändern per Chat</div>
+    </div>
+  </div>
+</section>
+
+<section id="schmerz">
+  <div class="wrap">
+    <div class="mono reveal">Kennen Sie das?</div>
+    <h2 class="reveal">Die Website ist da.<br>Nur aktuell ist sie nie.</h2>
+    <div class="pains">
+      <div class="pain reveal"><div class="q">„Für jede Kleinigkeit ein Ticket an die Agentur.“</div><p>Neue Öffnungszeiten, ein anderes Foto, der Betriebsurlaub – und dann warten, bis jemand Zeit hat. Und am Monatsende kommt die Rechnung.</p></div>
+      <div class="pain reveal"><div class="q">„Auf der Startseite steht noch Silvester 2023.“</div><p>Nicht, weil es egal wäre, sondern weil das System so kompliziert ist, dass sich keiner mehr hineintraut.</p></div>
+      <div class="pain reveal"><div class="q">„Bitte aktualisieren Sie Ihre Plugins.“</div><p>Login, Updates, Sicherheitswarnungen – ein Content-System will ständig betreut werden. Ihre Kunden wollen nur wissen, wann Sie offen haben.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="chat">
+  <div class="wrap">
+    <div class="mono reveal">Das Herzstück</div>
+    <h2 class="reveal">Sagen, was anders sein soll.<br>Fertig.</h2>
+    <p class="lead reveal">Probieren Sie es aus: Tippen Sie unten auf einen Wunsch und schauen Sie zu, wie sich die Beispielseite ändert. Genau so pflegen Sie später Ihre eigene Website – am Handy, am Laptop, wann immer es Ihnen einfällt.</p>
+    <div class="demo reveal">
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span class="url">gasthof-beispiel.at</span></div>
+        <div class="mini">
+          <div class="mh" id="dHero"><span class="badge" id="dBadge">Betriebsurlaub 3.–17. März</span><div class="t"><small>Beispielseite</small>Gasthof Zur Linde</div></div>
+          <div class="body">
+            <div><h4>Öffnungszeiten</h4><div class="box" id="dHours"><div class="row"><span>Di – Sa</span><span>11 – 22 Uhr</span></div><div class="row"><span>So</span><span>10 – 20 Uhr</span></div><div class="row"><span>Mo</span><span>Ruhetag</span></div></div></div>
+            <div><h4>Heute auf der Karte</h4><div class="box" id="dDish">Schweinebraten mit Knödel<br><b>14,50 €</b></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="head"><span class="dot"></span>Ihr Website-Chat</div>
+        <div class="msgs" id="msgs"><div class="m a">Servus! Was soll ich auf Ihrer Seite ändern?</div></div>
+        <div class="chips" id="chips">
+          <button class="chip" data-k="dish">Tagesgericht: Kässpatzen 12,90 €</button>
+          <button class="chip" data-k="hours">Sonntag nur bis 18 Uhr</button>
+          <button class="chip" data-k="urlaub">Betriebsurlaub 3.–17. März eintragen</button>
+          <button class="chip" data-k="winter">Startbild winterlich machen</button>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note reveal">Bei großen Umbauten – neue Unterseiten, neue Funktionen, eine andere Struktur – nimmt der Chat Ihren Wunsch auf und schickt ihn an uns. Sie bekommen vorher einen Festpreis.</p>
+  </div>
+</section>
+
+<section id="wege">
+  <div class="wrap">
+    <div class="mono reveal">Zwei Wege</div>
+    <h2 class="reveal">Neu gestalten –<br>oder einfach behalten.</h2>
+    <p class="lead reveal">Viele Betriebe mögen ihre Website eigentlich. Sie ärgern sich nur, dass sie nichts selbst ändern können. Dann muss sich am Aussehen nichts ändern.</p>
+    <div class="ways">
+      <div class="way reveal">
+        <span class="mono tag">Weg 1 · 1:1-Übernahme</span>
+        <h3>Sieht aus wie immer.<br>Ist es aber nicht.</h3>
+        <p>Wir bauen Ihre bestehende Seite Pixel für Pixel nach – nur eben modern darunter: schnell, sicher, fürs Handy und für Suchmaschinen gemacht und ab sofort per Chat pflegbar.</p>
+        <ul><li>Ihre Kunden sehen keinen Unterschied</li><li>Domain und E-Mail bleiben, wie sie sind</li><li>Auf Wunsch kleiner Feinschliff</li></ul>
+        <div class="toggle"><div class="sw" id="sw" role="switch" aria-checked="false" tabindex="0"></div><span id="swl">Alt: WordPress, Login, Plugins</span></div>
+        <div class="cmp" id="cmp">
+          <div class="alt"><div class="hd">Gasthof Zur Linde</div><p style="margin-top:8px">Herzlich willkommen auf unserer Homepage …</p></div>
+          <div class="neu"><div class="hd">Gasthof Zur Linde</div><p style="margin-top:8px">Herzlich willkommen auf unserer Homepage …</p><span class="ok">statisch · schnell · Chat-Pflege</span></div>
+        </div>
+        <div class="price">299 € <small>einmalig</small></div>
+      </div>
+      <div class="way reveal">
+        <span class="mono tag">Weg 2 · Neugestaltung</span>
+        <h3>Ein Auftritt,<br>der zu Ihnen passt.</h3>
+        <p>Kein Baukasten-Look: Wir gestalten passend zu Ihrem Handwerk, Ihrem Haus, Ihrer Küche – mit Ihren Farben, Ihren Bildern, Ihrer Sprache. Erst sehen Sie einen Entwurf, dann entscheiden Sie.</p>
+        <ul><li>5 Unterseiten inklusive</li><li>Entwurf zum Anschauen vorab</li><li>Auf Handy, Tablet und Computer geprüft</li></ul>
+        <div class="price">599 € <small>einmalig</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vorteile">
+  <div class="wrap">
+    <div class="mono reveal">Was drinsteckt</div>
+    <h2 class="reveal">Technik, über die Sie<br>nie wieder nachdenken.</h2>
+    <div class="feats reveal">
+      <div class="feat"><div class="ic">01 · Sicherheit</div><h3>Keine offene Tür</h3><p>Ihre Seite kommt ohne Datenbank und ohne Admin-Login aus. Damit fallen die typischen Angriffswege auf WordPress &amp; Co. einfach weg. Keine Plugins, keine Update-Pflicht.</p></div>
+      <div class="feat"><div class="ic">02 · Tempo</div><h3>Schnell, auch am Berg</h3><p>Fertige Seiten statt Baukasten zur Laufzeit: Sie laden auch bei schwachem Netz zügig. Gäste und Kunden sind meistens am Handy unterwegs.</p></div>
+      <div class="feat"><div class="ic">03 · Gefunden werden</div><h3>Bei Google und bei der KI</h3><p>Immer mehr Menschen fragen ChatGPT &amp; Co. „Wo esse ich gut in Reutte?“. Wir strukturieren Ihre Seite so, dass Suchmaschinen und KI-Assistenten Sie verstehen und nennen können.</p></div>
+      <div class="feat"><div class="ic">04 · Datenschutz</div><h3>Gehostet in Deutschland</h3><p>Server in Deutschland, keine Tracker, keine eingebetteten Schriften von Google. Weniger Cookie-Banner-Ärger, weniger Abmahnfläche.</p></div>
+      <div class="feat"><div class="ic">05 · Sicherheitsnetz</div><h3>Jede Änderung rückgängig</h3><p>Der Chat speichert jeden Stand. Gefällt Ihnen etwas nicht mehr, springen Sie mit einem Satz zurück.</p></div>
+      <div class="feat"><div class="ic">06 · Kein Eingesperrt-Sein</div><h3>Ihre Seite gehört Ihnen</h3><p>Domain auf Ihren Namen, und wenn Sie gehen, bekommen Sie Ihre fertige Website als Paket mit. Ohne Wenn und Aber.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="preise">
+  <div class="wrap">
+    <div class="mono reveal">Preise</div>
+    <h2 class="reveal">Klar gerechnet.</h2>
+    <p class="lead reveal">Einmal einrichten, dann ein fester Monatsbetrag. Weil Sie Alltägliches selbst per Chat erledigen, bleibt die Betreuung günstig – und wer lieber alles abgibt, wählt einfach mehr Begleitung.</p>
+
+    <div class="prices">
+      <div class="plan reveal">
+        <div class="n">Selbst</div><div class="s">Sie pflegen, wir halten alles am Laufen</div>
+        <div class="p">29 € <small>/ Monat</small></div>
+        <ul><li>Hosting in Deutschland, Domain, SSL</li><li>Chat-Pflege rund um die Uhr: Texte, Bilder, Preise, Zeiten, Termine</li><li>Jeder Stand gespeichert, jederzeit zurück</li><li>Technik-Überwachung</li><li>Kurzer Monatsbericht</li><li>Hilfe per E-Mail</li></ul>
+      </div>
+      <div class="plan hl reveal">
+        <div class="n">Begleitet</div><div class="s">Selbst pflegen – oder uns schreiben</div>
+        <div class="p">49 € <small>/ Monat</small></div>
+        <ul><li>Alles aus „Selbst“</li><li class="plus">3 Änderungen im Monat erledigen wir für Sie – per WhatsApp oder E-Mail</li><li class="plus">Google-Unternehmensprofil aktuell gehalten</li><li class="plus">Pflege für Google- und KI-Sichtbarkeit</li><li class="plus">Telefonische Rücksprache</li></ul>
+      </div>
+      <div class="plan reveal">
+        <div class="n">Rundum</div><div class="s">Sie sagen Bescheid, wir machen</div>
+        <div class="p" style="font-size:34px;line-height:1.2">auf Anfrage</div>
+        <ul><li>Alles aus „Begleitet“</li><li class="plus">Mehr Änderungen durch uns, schnell umgesetzt</li><li class="plus">Saisonale Aktualisierung von Bildern und Angeboten</li><li class="plus">Zweitsprache wird mitgepflegt</li><li class="plus">Persönlicher Ansprechpartner</li></ul>
+      </div>
+    </div>
+
+    <div class="setup">
+      <div class="su reveal"><div class="mono">Einrichtung · 1:1-Übernahme</div><div class="p">299 €</div><p>Ihre bestehende Website, technisch neu gebaut, Aussehen bleibt. Bis 10 Unterseiten, größere Seiten auf Anfrage.</p></div>
+      <div class="su reveal"><div class="mono">Einrichtung · Neugestaltung</div><div class="p">599 €</div><p>Neuer Auftritt passend zu Ihrem Betrieb, inklusive 5 Unterseiten. Jede weitere Unterseite 69 €.</p></div>
+      <div class="su reveal"><div class="mono">Vereine</div><div class="p">0 €</div><p>Für Vereine aus der Region richten wir die Seite kostenlos ein. Es bleibt beim Monatsbetrag „Selbst“.</p></div>
+    </div>
+
+    <div class="extra reveal">
+      <div><h3 style="margin-bottom:10px">Größere Wünsche über den Chat</h3><p style="color:var(--muted);font-size:15.5px">Neue Unterseite, ein Buchungs- oder Anfrageformular, eine andere Struktur: Der Chat nimmt den Wunsch auf, und Sie bekommen vorab einen Festpreis. Erst wenn Sie zusagen, legen wir los.</p></div>
+      <table>
+        <tr><td>Neue Unterseite</td><td>69 €</td></tr>
+        <tr><td>Umbau von Menü oder Aufbau</td><td>ab 149 €</td></tr>
+        <tr><td>Neue Funktion (z. B. Formular, Speisekarte als Seite)</td><td>Festpreis vorab</td></tr>
+        <tr><td>Jährliche Zahlung</td><td>2 Monate geschenkt</td></tr>
+      </table>
+    </div>
+    <p class="fine reveal">Mindestlaufzeit 12 Monate, danach monatlich kündbar. Hochstufen jederzeit zum nächsten Monat. Alle Preise netto; byFröhlich ist 2026 Kleinunternehmer nach § 19 UStG und weist keine Umsatzsteuer aus. Die Chat-Pflege ist für den normalen Betrieb einer Website gedacht (Inhalte ändern), nicht für den kompletten Neubau.</p>
+  </div>
+</section>
+
+<section id="ablauf">
+  <div class="wrap">
+    <div class="mono reveal">So läuft es</div>
+    <h2 class="reveal">Vier Schritte.<br>Keiner davon technisch.</h2>
+    <div class="steps">
+      <div class="step reveal"><h3>Kostenloser Check</h3><p>Sie nennen uns Ihre Webadresse. Wir schauen sie uns an und sagen Ihnen ehrlich, was gut ist und was nicht.</p></div>
+      <div class="step reveal"><h3>Entwurf ansehen</h3><p>Sie bekommen Ihre Startseite als Entwurf zum Durchklicken – neu gestaltet oder 1:1 übernommen.</p></div>
+      <div class="step reveal"><h3>Livegang</h3><p>Wir ziehen alles um, geprüft auf Handy, Tablet und Computer. Ihre Domain und Ihre E-Mails laufen weiter.</p></div>
+      <div class="step reveal"><h3>Selbst pflegen</h3><p>Ab jetzt sagen Sie dem Chat, was neu ist. Und wenn es größer wird, sind wir da.</p></div>
+    </div>
+    <div class="who reveal"><span>Gasthöfe &amp; Restaurants</span><span>Ferienwohnungen &amp; Hotels</span><span>Handwerk</span><span>Hofläden</span><span>Praxen</span><span>Händler</span><span>Vereine</span></div>
+  </div>
+</section>
+
+<section id="fragen">
+  <div class="wrap">
+    <div class="mono reveal">Fragen</div>
+    <h2 class="reveal">Gut, dass Sie fragen.</h2>
+    <div class="faq reveal">
+      <details><summary>Muss ich mich mit Technik auskennen?</summary><p>Nein. Wenn Sie eine Nachricht schreiben können, können Sie Ihre Website pflegen. Sie schreiben „Ab Montag haben wir bis 20 Uhr offen“ – und der Chat setzt es um.</p></details>
+      <details><summary>Kann der Chat etwas kaputt machen?</summary><p>Jede Änderung wird gespeichert. Gefällt Ihnen etwas nicht, sagen Sie „mach das rückgängig“ und der vorige Stand ist wieder da. Grundlegende Umbauten macht der Chat nicht selbst – die gehen als Anfrage an uns.</p></details>
+      <details><summary>Was passiert mit meiner Domain und meinen E-Mail-Adressen?</summary><p>Die bleiben, wo sie sind, und laufen ohne Unterbrechung weiter. Wir stellen nur die Website um.</p></details>
+      <details><summary>Wem gehört die Website?</summary><p>Ihnen. Beenden Sie den Vertrag, bekommen Sie Ihre fertige Seite als Paket, das bei jedem Anbieter läuft.</p></details>
+      <details><summary>Was ist der Unterschied zwischen 1:1-Übernahme und Neugestaltung?</summary><p>Bei der 1:1-Übernahme bleibt das Aussehen Ihrer Seite gleich, nur die Technik darunter wird neu und pflegbar. Bei der Neugestaltung bekommen Sie einen neuen Auftritt, der zu Ihrem Betrieb passt.</p></details>
+      <details><summary>Ist meine Seite bei Google und in KI-Antworten zu finden?</summary><p>Wir bauen jede Seite so, dass Suchmaschinen und KI-Assistenten sie sauber lesen können: klare Struktur, Angaben zu Ort, Öffnungszeiten und Leistungen in maschinenlesbarer Form. Eine Platzierung kann niemand ehrlich garantieren – aber wir schaffen die Grundlage.</p></details>
+      <details><summary>Warum mindestens 12 Monate?</summary><p>Weil die Einrichtung günstig ist und sich die Arbeit über das erste Jahr verteilt. Danach können Sie monatlich kündigen.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="check" style="padding-top:40px">
+  <div class="wrap">
+    <div class="check reveal">
+      <div>
+        <div class="mono">Kostenloser Website-Check</div>
+        <h2 style="font-size:clamp(32px,4.4vw,52px)">Wie gut ist Ihre Seite wirklich?</h2>
+        <p class="lead">Schicken Sie uns Ihre Webadresse. Sie bekommen eine kurze, ehrliche Auswertung: Tempo, Handy, Sicherheit, Google- und KI-Sichtbarkeit – und auf Wunsch einen Entwurf, wie es aussehen könnte. Kostenlos und unverbindlich.</p>
+        <div class="contact-line"><span>E-Mail <a href="mailto:kontakt@byfroehlich.de">kontakt@byfroehlich.de</a></span><span>Telefon <a href="tel:+491799042777">+49 179 9042777</a></span></div>
+      </div>
+      <form id="cf">
+        <input id="fUrl" type="text" placeholder="Ihre Webadresse, z. B. gasthof-linde.at" required>
+        <input id="fName" type="text" placeholder="Ihr Name und Betrieb">
+        <select id="fWay"><option>Ich will meine Seite behalten (1:1)</option><option>Ich hätte gern etwas Neues</option><option>Weiß ich noch nicht</option></select>
+        <button class="btn btn-primary" type="submit" style="justify-content:center">Check anfragen</button>
+        <p style="font-size:13px;color:var(--muted)">Öffnet Ihr E-Mail-Programm mit einer vorbereiteten Nachricht. Wir speichern auf dieser Seite nichts.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>byFröhlich · Webseiten</h4>
+        <p>Aus Vils, Tirol – für Betriebe und Vereine im Außerfern und im Allgäu.</p>
+        <p style="margin-top:10px"><a href="/">← zu byfroehlich.de</a></p>
+      </div>
+      <div>
+        <details><summary>Impressum</summary><p>Angaben gemäß § 5 DDG<br>Mathias Fröhlich · byFröhlich<br>Lußwiesen 2b, 87547 Missen-Wilhams, Deutschland<br>E-Mail: kontakt@byfroehlich.de · Telefon: +49 179 9042777<br>Umsatzsteuer: Kleinunternehmer gemäß § 19 UStG, es wird keine Umsatzsteuer ausgewiesen.<br>Verbraucherstreitbeilegung: Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p></details>
+        <details><summary>Datenschutz</summary><p>Verantwortlich: Mathias Fröhlich, byFröhlich, Lußwiesen 2b, 87547 Missen-Wilhams, kontakt@byfroehlich.de.<br><br>Hosting: Diese Seite liegt auf einem Server der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser-Angaben) verarbeitet, um die Seite auszuliefern und vor Missbrauch zu schützen (Art. 6 Abs. 1 lit. f DSGVO).<br><br>Diese Seite setzt keine Cookies, nutzt keine Analyse- oder Tracking-Dienste und lädt keine Inhalte von Drittanbietern; Schriften werden vom eigenen Server geladen. Das Formular „Check anfragen“ speichert nichts, sondern öffnet nur Ihr E-Mail-Programm. Was Sie uns per E-Mail schicken, verwenden wir ausschließlich zur Beantwortung Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO).<br><br>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde.</p></details>
+      </div>
+    </div>
+    <p style="margin-top:30px;font-family:var(--fm);font-size:12px;letter-spacing:.08em">47.55° N · 10.63° O · VILS, TIROL</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Kopf
+  var h=document.getElementById('top');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>30)},{passive:true});
+
+  // Einblenden
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // Netz im Hero (Neuronen-Anmutung)
+  var c=document.getElementById('net'),x=c.getContext('2d'),P=[],W,H,mx=-999,my=-999,red=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function size(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio;P=[];var n=Math.min(90,Math.floor(W*H/26000/devicePixelRatio));for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+  size();addEventListener('resize',size);
+  c.parentNode.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();mx=(e.clientX-r.left)*devicePixelRatio;my=(e.clientY-r.top)*devicePixelRatio});
+  function draw(){x.clearRect(0,0,W,H);var d=150*devicePixelRatio;
+    for(var i=0;i<P.length;i++){var p=P[i];if(!red){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+      var dm=Math.hypot(p.x-mx,p.y-my);
+      x.fillStyle=dm<d*1.2?'#86d3c6':'rgba(134,211,198,.55)';x.beginPath();x.arc(p.x,p.y,(dm<d*1.2?2.6:1.6)*devicePixelRatio,0,7);x.fill();
+      for(var j=i+1;j<P.length;j++){var q=P[j],dd=Math.hypot(p.x-q.x,p.y-q.y);if(dd<d){x.strokeStyle='rgba(134,211,198,'+(1-dd/d)*.28+')';x.lineWidth=devicePixelRatio;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}
+    if(!red)requestAnimationFrame(draw)}
+  draw();
+
+  // Chat-Demo
+  var M=document.getElementById('msgs');
+  function add(t,cls){var d=document.createElement('div');d.className='m '+cls;d.innerHTML=t;M.appendChild(d);M.scrollTop=M.scrollHeight;return d}
+  function flash(el){el.classList.add('flash');setTimeout(function(){el.classList.remove('flash')},1400)}
+  var acts={
+    dish:{u:'Tagesgericht heute: Kässpatzen mit Röstzwiebeln, 12,90 €',a:'Erledigt – das Tagesgericht ist aktualisiert. ✓',f:function(){var e=document.getElementById('dDish');e.innerHTML='Kässpatzen mit Röstzwiebeln<br><b>12,90 €</b>';flash(e)}},
+    hours:{u:'Am Sonntag haben wir ab jetzt nur bis 18 Uhr offen.',a:'Ist drin. Soll ich das auch im Google-Profil ändern?',f:function(){var e=document.getElementById('dHours');e.children[1].children[1].textContent='10 – 18 Uhr';flash(e)}},
+    urlaub:{u:'Trag bitte Betriebsurlaub vom 3. bis 17. März ein.',a:'Steht oben als Hinweis – und verschwindet am 18. März von selbst. ✓',f:function(){document.getElementById('dBadge').classList.add('show')}},
+    winter:{u:'Mach das Startbild winterlich.',a:'Neues Titelbild ist drin. Gefällt’s? Sonst sag einfach „zurück“.',f:function(){document.getElementById('dHero').style.background='linear-gradient(135deg,#7f97ab,#c9d6df 55%,#eef3f6)'}}
+  };
+  document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+    var a=acts[b.dataset.k];if(!a)return;b.disabled=true;add(a.u,'u');
+    var t=add('schreibt …','a typing');
+    setTimeout(function(){t.remove();a.f();add(a.a,'a')},1100)})});
+
+  // Alt/Neu
+  var sw=document.getElementById('sw'),cmp=document.getElementById('cmp'),swl=document.getElementById('swl');
+  function tog(){var on=!sw.classList.contains('on');sw.classList.toggle('on',on);cmp.classList.toggle('on',on);sw.setAttribute('aria-checked',on);swl.textContent=on?'Neu: gleiches Aussehen, neue Technik':'Alt: WordPress, Login, Plugins'}
+  sw.addEventListener('click',tog);sw.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog()}});
+
+  // Check-Formular → E-Mail
+  document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();
+    var u=document.getElementById('fUrl').value.trim(),n=document.getElementById('fName').value.trim(),w=document.getElementById('fWay').value;
+    var body='Hallo,%0D%0A%0D%0Aich hätte gern einen kostenlosen Website-Check.%0D%0A%0D%0AWebadresse: '+encodeURIComponent(u)+'%0D%0AName/Betrieb: '+encodeURIComponent(n)+'%0D%0AWunsch: '+encodeURIComponent(w)+'%0D%0A%0D%0AViele Grüße';
+    location.href='mailto:kontakt@byfroehlich.de?subject='+encodeURIComponent('Website-Check: '+u)+'&body='+body});
+})();
+</script>
+</body>
+</html>
