@@ -8,12 +8,12 @@ Der abgenommene Entwurf (`byfroehlich-demo.html`, nicht im Repo) ist 1:1 umgeset
 
 ## Stack
 
-- Next.js (App Router, TypeScript), statischer Export (`output: "export"`, Ergebnis in `out/`), Hosting auf Vercel, Region `fra1` in `vercel.json`
+- Next.js (App Router, TypeScript), statischer Export (`output: "export"`, Ergebnis in `out/`), Hosting auf dem eigenen Server (Hetzner, Caddy, `/opt/web/static/byfroehlich`); Vercel wird nicht mehr genutzt (getrennt 25.11.2026)
 - Paketmanager npm (`package-lock.json` committen)
 - Repo auf GitHub
 - Kein CSS-Framework nötig; CSS Modules oder eine globale CSS-Datei mit den Tokens aus der Demo
 - Schriften über `next/font/google` (Bricolage Grotesque, Instrument Sans, JetBrains Mono). Damit werden sie beim Build heruntergeladen und selbst gehostet. Es darf zur Laufzeit KEINE Verbindung zu Google-Servern geben.
-- Kein Vercel Analytics, keine Speed Insights, keine Cookies, kein Tracking. Die Datenschutzerklärung sagt das so.
+- Keine Analytics, keine Speed Insights, keine Cookies, kein Tracking. Die Datenschutzerklärung sagt das so.
 
 ## Aufbau
 
@@ -54,6 +54,5 @@ Impressum und Datenschutz bleiben aufklappbare Bereiche (`<details id="impressum
 
 - Kleinunternehmerregelung gilt nur noch 2026: Absatz „Umsatzsteuer“ im Impressum zum Jahreswechsel anpassen (USt-IdNr. oder Steuernummer-Hinweis).
 - Helle Variante behalten oder entfernen.
-- Domain byfroehlich.de in Vercel verbinden.
 
 Erledigt: Es gibt keine W-IdNr. Das Logo ist festgelegt.
